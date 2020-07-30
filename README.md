@@ -12,6 +12,13 @@ go run server.go
 
 ### ext
 
+ref:
+
+https://www.graphql-tools.com/docs/generate-schema
+
+https://github.com/sky0621/study-gqlgen.git
+
+
 #### split schema before and after
 
 ```
