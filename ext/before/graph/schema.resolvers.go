@@ -12,19 +12,29 @@ import (
 )
 
 func (r *mutationResolver) CreateItem(ctx context.Context, input model.ItemInput) (string, error) {
-	panic(fmt.Errorf("not implemented"))
+	fmt.Printf("input: %#v\n", input)
+	return "item-id-01", nil
 }
 
 func (r *mutationResolver) CreateUser(ctx context.Context, input model.UserInput) (string, error) {
-	panic(fmt.Errorf("not implemented"))
+	fmt.Printf("input: %#v\n", input)
+	return "user-id-01", nil
 }
 
 func (r *queryResolver) Item(ctx context.Context, id string) (*model.Item, error) {
-	panic(fmt.Errorf("not implemented"))
+	fmt.Printf("id: %s\n", id)
+	return &model.Item{
+		ID:   "item-id-01",
+		Name: "item01",
+	}, nil
 }
 
 func (r *queryResolver) User(ctx context.Context, id string) (*model.User, error) {
-	panic(fmt.Errorf("not implemented"))
+	fmt.Printf("id: %s\n", id)
+	return &model.User{
+		ID:   "user-id-01",
+		Name: "user01",
+	}, nil
 }
 
 // Mutation returns generated.MutationResolver implementation.
